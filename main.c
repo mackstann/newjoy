@@ -114,7 +114,7 @@ int main(void)
         int vert_px = (int)pow(abs(vert) * 0.0001, 2.7) * (vert >= 0 ? 1 : -1);
         if(horz_px != 0 || vert_px != 0)
         {
-            fprintf(stderr, "ev %d %d -> %d %d\n", horz, vert, horz_px, vert_px);
+            //fprintf(stderr, "ev %d %d -> %d %d\n", horz, vert, horz_px, vert_px);
             XTestFakeRelativeMotionEvent(dpy, horz_px, vert_px, CurrentTime);
             XSync(dpy, False);
         }
